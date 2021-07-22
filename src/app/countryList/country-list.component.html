@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Country List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Country_ID</th>
+            <th>Country Name</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Country of countries | async">
+            <td>{{Country.id}}</td>
+            <td>{{Country.name}}</td>
+            <td><button (click)="deleteCountry(Country.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateCountry(Country.id)" class="btn btn-danger">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
