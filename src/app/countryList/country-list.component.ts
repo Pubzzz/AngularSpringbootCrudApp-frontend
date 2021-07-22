@@ -22,7 +22,7 @@ export class countryListComponent implements OnInit {
   }
 
   reloadData() {
-    this.countries = this.countryService.getCountriesList();
+     this.countryService.getCountriesList().subscribe((res)=>console.log(res));
   }
 
   deleteCountry(id: number) {
