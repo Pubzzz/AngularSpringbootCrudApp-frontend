@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { countryService } from 'src/app/country.service'
 @Component({
   selector: 'app-update-country',
-  template: "./update-country.component.html",
+  templateUrl: "./update-country.component.html",
   styleUrls: ['./update-country.component.css']
 })
 export class UpdateCountryComponent implements OnInit {

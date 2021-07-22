@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class countryListComponent implements OnInit {
   
-  countries: Observable<country[]>;
+  countries: country[];
 
   constructor(private countryService: countryService,
     private router: Router) {}
@@ -22,7 +22,9 @@ export class countryListComponent implements OnInit {
   }
 
   reloadData() {
-     this.countryService.getCountriesList().subscribe((res)=>console.log(res));
+     this.countryService.getCountriesList().subscribe((res)=> {
+      this.countries = res;
+     });
   }
 
   deleteCountry(id: number) {

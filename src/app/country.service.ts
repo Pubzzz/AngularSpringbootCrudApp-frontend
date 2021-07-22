@@ -9,7 +9,7 @@ import { country } from "src/app/country"
 })
 export class countryService {
 
-  private baseUrl = 'http://localhost:8080/springboot-crud-rest/rest/v2/countries';
+  private baseUrl = 'http://localhost:8080/springboot-crud-app/rest/v2/countries';
 
   constructor(private http: HttpClient) { }
 

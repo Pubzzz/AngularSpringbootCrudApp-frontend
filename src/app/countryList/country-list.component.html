@@ -11,11 +11,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let Country of countries | async">
+          <tr *ngFor="let Country of countries">
             <td>{{Country.id}}</td>
-            <td>{{Country.name}}</td>
-            <td><button (click)="deleteCountry(Country.id)" class="btn btn-danger">Delete</button>
-              <button (click)="updateCountry(Country.id)" class="btn btn-danger">Update</button>
+            <td>{{Country.countryName}}</td>
+          <td><button (click)="deleteCountry(Country.id)" class="btn btn-danger">Delete</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button (click)="updateCountry(Country.id)" class="btn btn-success">Update</button>
             </td>
           </tr>
         </tbody>
