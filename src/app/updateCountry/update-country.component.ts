@@ -41,6 +41,6 @@ export class UpdateCountryComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/springboot-crud-rest/rest/v2/countries']);
+    this.router.navigate(['/countries']);
   }
 }
