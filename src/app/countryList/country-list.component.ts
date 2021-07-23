@@ -1,5 +1,5 @@
 
-import { Observable } from "rxjs";
+
 import { countryService } from "src/app/country.service";
 import { country } from "src/app/country";
 import { Component, OnInit } from "@angular/core";
@@ -21,6 +21,7 @@ export class countryListComponent implements OnInit {
     this.reloadData();
   }
 
+//Using subscribe method 
   reloadData() {
      this.countryService.getCountriesList().subscribe((res)=> {
       this.countries = res;
